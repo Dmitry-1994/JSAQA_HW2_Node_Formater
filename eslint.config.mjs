@@ -2,13 +2,13 @@ import { defineConfig } from 'eslint/config'
 import js from '@eslint/js'
 
 export default defineConfig([
-    {
-        files: ['**/*.js'],
-        plugins: {
-            js,
-        },
-        extends: ['js/recommended'],
-        "rules": {
+	{
+		files: ['**/*.js'],
+		plugins: {
+			js
+		},
+		extends: ['js/recommended'],
+		"rules": {
 			"linebreak-style": ["error", "windows"], // символ(ы) конца строки
 			"quotes": ["error", "single"], // использовать одинарные кавычки
 			"semi": ["error", "always"], // точка с запятой в конце операторов
@@ -27,7 +27,7 @@ export default defineConfig([
 				"imports": "never",
 				"exports": "never",
 				"functions": "never"
-        	}],
+			}],
 			"brace-style": ["error", "1tbs"], // правила для фигурных скобкок для блоков кода
 			"keyword-spacing": "error", // пробел слева и справа для ключевых слов
 			"no-multi-spaces": "error", // не допускается несколько пробелов подряд
@@ -94,6 +94,6 @@ export default defineConfig([
 			"require-yield": "error", // требовать yield для функции-генератора
 			"use-isnan": "error", // требовать isNaN() для проверки NaN
 			"valid-typeof": "error" // требовать для typeof допустимых строк "string", "undefined", "object"
-    	}
-    }
+		}
+	}
 ])
